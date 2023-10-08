@@ -13,6 +13,9 @@ import json
 #Librería para enviar solicitudes al servidor
 from flask import jsonify
 
+#Librería para servidor de producción
+from waitress import serve
+
 #Librería para el manejo de sesiones activas de los usuarios
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 
@@ -676,5 +679,16 @@ def pdf_template(table_data_json):
 
 
 
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+mode = "prod"
+
 if __name__ == '__main__':
-    app.run(debug=True)
+     
+    if mode == "dev":
+        app.run(host='0.0.0.0', port=5000, debug=True)
+    else:
+        serve(app,host='0.0.0.0',port=5000,threads=2)
+
