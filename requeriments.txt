@@ -1,0 +1,6 @@
+Flask
+Flask-MySQL
+Jinja2
+pdfkit
+json
+Flask-Login
