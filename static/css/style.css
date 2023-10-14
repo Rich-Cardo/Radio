@@ -433,6 +433,7 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: center;
+    display:none;
 }
 
 /* Modal del header */

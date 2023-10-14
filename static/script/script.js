@@ -16,7 +16,7 @@ function getCurrentTemplate() {
 var currentTemplate = getCurrentTemplate();
 
 //Validaciones para los campos de las plantillas HTML
-if (currentTemplate === 'edit_user' || currentTemplate === 'create_user') {
+if (currentTemplate === 'edit_user' || currentTemplate === 'create_user' || currentTemplate == 'registro') {
 
     var cedulaInput = document.getElementById('txtCedula');
     var nombreInput = document.getElementById('txtNombre');

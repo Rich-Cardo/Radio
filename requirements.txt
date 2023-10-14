@@ -1,6 +1,2 @@
 Flask
-Flask-MySQL
 Jinja2
-pdfkit
-Flask-Login
-waitress
