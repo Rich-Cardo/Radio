@@ -17,25 +17,18 @@ import requests
 app = Flask(__name__,static_folder='static')
 
 
-def solicitud():
-    response = requests.get("https://zenoplay.zenomedia.com/api/zenofm/nowplaying/zd5tv0m2uk8uv")
-    data = response.json()
-    title = data['title']
+# def solicitud():
+#     response = requests.get("https://zenoplay.zenomedia.com/api/zenofm/nowplaying/zd5tv0m2uk8uv")
+#     data = response.json()
+#     title = data['title']
 
-    return title
+#     return title
 
 
 @app.route('/')
 def index():
 
-    variable = solicitud()
-    print(variable)
-
-    return render_template('header.html', variable = variable)
-
-
-
-
+    return render_template('header.html')
 
 
 mode = "prod"
